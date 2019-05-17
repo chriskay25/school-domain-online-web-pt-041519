@@ -1,3 +1,5 @@
+require 'Pry'
+
 class School
   
   attr_reader :roster
@@ -6,6 +8,7 @@ class School
     @school = school 
     @roster = {}
   end
+  pry
   
   
   def add_student(name, grade)

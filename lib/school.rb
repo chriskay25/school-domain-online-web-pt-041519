@@ -8,27 +8,22 @@ class School
     @school = school 
     @roster = {}
   end
-  binding.pry
-  
   
   def add_student(name, grade)
     @name = name 
     @grade = grade
     if @roster.key?(grade)
-      @roster[grade] << name 
+      @roster[@grade] << @name 
     else 
-      @roster[grade] = []
-      @roster[grade] << name
+      @roster[@grade] = []
+      @roster[@grade] << @name
     end
   end 
   
   def grade(grade)
-    @roster[grade]
-  end 
-  
-  def sort
-    @roster[grade].sort!
+    @roster[@grade]
   end 
   
   
-end 
+  
+end
